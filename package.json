@@ -1,6 +1,6 @@
 {
-  "name": "mailgun.js",
-  "version": "2.0.1",
+  "name": "mailgun-node-js",
+  "version": "2.1.0",
   "main": "index.js",
   "author": "Mailgun",
   "license": "MIT",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/mailgun/mailgun-js.git"
+    "url": "git://github.com/brunohartmann/mailgun-js.git"
   },
   "bugs": {
     "url": "https://github.com/mailgun/mailgun-js/issues"
@@ -29,6 +29,7 @@
   "dependencies": {
     "btoa": "^1.1.2",
     "es6-promise": "^3.0.2",
+    "jscs": "^3.0.7",
     "lodash.defaults": "^3.1.2",
     "lodash.indexby": "^3.1.1",
     "lodash.last": "^3.0.0",

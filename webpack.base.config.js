@@ -39,7 +39,7 @@ module.exports = function(env) {
           drop_console: true
         },
         include: ['mailgun.min.js'],
-        output: {comments: false}
+        output: { comments: false }
       }),
       new webpack.BannerPlugin(pkg.name + ' v' + pkg.version),
       new webpack.NoErrorsPlugin()
@@ -47,14 +47,14 @@ module.exports = function(env) {
     module: {
       preLoaders: [
         {
-          test:    /\.js$/,
+          test: /\.js$/,
           exclude: /node_modules/,
           loader: 'jscs-loader'
         }
       ],
       loaders: [
-        { test: /\.js$/, loader: 'babel', exclude: /(node_modules)/},
-        { include: /\.json$/, loader: 'json', exclude: /(node_modules)/},
+        { test: /\.js$/, loader: 'babel', exclude: /(node_modules)/ },
+        { include: /\.json$/, loader: 'json', exclude: /(node_modules)/ }
       ]
     },
     resolve: {
@@ -65,7 +65,6 @@ module.exports = function(env) {
   };
 
   if (env === 'release') {
-    config.jscs.failOnHint = true;
     config.plugins.push(new webpack.optimize.DedupePlugin());
   }
 
